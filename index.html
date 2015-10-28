@@ -23,8 +23,72 @@
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Know Your Representative.</h3>
 
 <p>The following document lays out the API structure for the KYR Application</p>
+<br>
+<br>
+<p> <h2> <center> API ENDPOINTS </center> </h2> </p>
+<p> 
+<h5> <b> All the Request/Response data is in application/json format unless explicitly specified </b> </h5>
+<br> 
+<h2> /search?q=:PARAMS: </h2>
+<p> This endpoints allows user's to search for their respective MP's . </p>
+<br>
+<h4> CALL TYPE : POST </h4>
+<h4> Request : </h4>
+<p>
+{
+ "candidate_name":"abcd"
+} 
+</p>
+<br>
+<br>
+<h4> Response : </h4>
+<p>
+{
+"name": "abasadlkasdjalsdasld"
+"nature_of_membership": "abasadlkasdjalsdasld"
+"start_term": "abasadlkasdjalsdasld"
+"end_term": "abasadlkasdjalsdasld"
+"state": "abasadlkasdjalsdasld"
+"political_party": "abasadlkasdjalsdasld"
+"gender": "male"
+"educational_qualification": "abasadlkasdjalsdasld"
+"age": "45"
+"debates_participated": "27"
+"private_member_bills": "45"
+"questions_asked": "45"
+"attendance": "45"
+"other_notes": "abasadlkasdjalsdasld"
+}
+</p>
 
-
+<br> 
+<br> 
+<h2> /complaint </h2>
+<p> This endpoints allows user's to send complain to the respective MP on social media or on our account on Twitter. </p>
+<br>
+<h4> CALL TYPE : POST </h4>
+<h4> Request : </h4>
+<p>
+{
+ "name_of_the_person_compalining":"abcd"
+ "phone_number_of_the_person":"+910132646544"
+ "photo_of_the_area": "https://example.com/abc.jpg" (Refers to the photo of the area about which user wants to complain)
+ "description_of_the_problem": "lorem ipsum abcd lkasjdlaksjd lksajdl;skjasd lkfjsdff " (word limit upto 100 words)
+ "geolocation": "14.04N, 35.04E"
+ "name_of_the_mp_for_problem_redressal": "abcded"
+} 
+</p>
+<br>
+<br>
+<h4> Response : 200 OK </h4>
+<p>
+{
+"status":"submitted"
+"concerned_mp":"abcd"
+"complain_id": "ARN101012123"
+}
+</p>
+<br> <p> After a while the user's complain is posted along with the given complain_id on twitter with appropriate hashtags by our admin team. The user can check it on Twitter using complain_id as a hashtag</p> 
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/aniketmaithani/KYR2">Kyr2</a> is maintained by <a href="https://github.com/aniketmaithani">aniketmaithani</a>.</span>
