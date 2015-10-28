@@ -44,19 +44,19 @@
 <h4> Response : </h4>
 <p>
 {
-"name": "abasadlkasdjalsdasld"
-"nature_of_membership": "abasadlkasdjalsdasld"
-"start_term": "abasadlkasdjalsdasld"
-"end_term": "abasadlkasdjalsdasld"
-"state": "abasadlkasdjalsdasld"
-"political_party": "abasadlkasdjalsdasld"
-"gender": "male"
-"educational_qualification": "abasadlkasdjalsdasld"
-"age": "45"
-"debates_participated": "27"
-"private_member_bills": "45"
-"questions_asked": "45"
-"attendance": "45"
+"name": "abasadlkasdjalsdasld",
+"nature_of_membership": "abasadlkasdjalsdasld",
+"start_term": "abasadlkasdjalsdasld",
+"end_term": "abasadlkasdjalsdasld",
+"state": "abasadlkasdjalsdasld",
+"political_party": "abasadlkasdjalsdasld",
+"gender": "male",
+"educational_qualification": "abasadlkasdjalsdasld",
+"age": "45",
+"debates_participated": "27",
+"private_member_bills": "45",
+"questions_asked": "45",
+"attendance": "45",
 "other_notes": "abasadlkasdjalsdasld"
 }
 </p>
@@ -64,17 +64,18 @@
 <br> 
 <br> 
 <h2> /complaint </h2>
-<p> This endpoints allows user's to send complain to the respective MP on social media or on our account on Twitter. </p>
+<p> This endpoints allows user's to send complain to the respective MP on social media or on our account on Twitter.  </p>
+<h3> Data Type : Multipart Form Data </h3>
 <br>
 <h4> CALL TYPE : POST </h4>
 <h4> Request : </h4>
 <p>
 {
- "name_of_the_person_compalining":"abcd"
- "phone_number_of_the_person":"+910132646544"
- "photo_of_the_area": "https://example.com/abc.jpg" (Refers to the photo of the area about which user wants to complain)
- "description_of_the_problem": "lorem ipsum abcd lkasjdlaksjd lksajdl;skjasd lkfjsdff " (word limit upto 100 words)
- "geolocation": "14.04N, 35.04E"
+ "name_of_the_person_compalining":"abcd",
+ "phone_number_of_the_person":"+910132646544",
+ "photo_of_the_area": "https://example.com/abc.jpg", (Refers to the photo of the area about which user wants to complain)
+ "description_of_the_problem": "lorem ipsum abcd lkasjdlaksjd lksajdl;skjasd lkfjsdff", (word limit upto 100 words)
+ "geolocation": "14.04N, 35.04E",
  "name_of_the_mp_for_problem_redressal": "abcded"
 } 
 </p>
@@ -83,8 +84,8 @@
 <h4> Response : 200 OK </h4>
 <p>
 {
-"status":"submitted"
-"concerned_mp":"abcd"
+"status":"submitted",
+"concerned_mp":"abcd",
 "complain_id": "ARN101012123"
 }
 </p>
