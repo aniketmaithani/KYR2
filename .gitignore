@@ -103,4 +103,4 @@ $RECYCLE.BIN/
 
 # Database 
 
-*.sqllite3
+*.sqlite3

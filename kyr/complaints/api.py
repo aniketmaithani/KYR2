@@ -9,10 +9,10 @@ from rest_framework import viewsets, mixins
 from rest_framework.permissions import AllowAny
 
 
-class ComplaintViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, viewsets.GenericViewSet, mixins.ListModelMixin):
+class ComplaintViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, viewsets.GenericViewSet):
 
     """
-    API endpoint that allows user to submit their complaints 
+    API endpoint that allows user to submit their complaints
     """
     permission_classes = (AllowAny, )
     queryset = Complaints.objects.all()
