@@ -37,8 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kyr.complaints', # Complaints Application
-    'rest_framework', # Django Rest Framework
+    'kyr.complaints',  # Complaints App
+    'kyr.parliament',  # Parliament App
+    'rest_framework',  # Django Rest Framework
 )
 
 MIDDLEWARE_CLASSES = (
@@ -104,10 +105,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-# Rest Framework Settings 
+# Rest Framework Settings
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
     'PAGE_SIZE': 10
 }
-
