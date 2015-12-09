@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers
-from complaints.api import ComplaintViewSet	
+from kyr.complaints.api import ComplaintViewSet
 
 router = routers.DefaultRouter(trailing_slash=True)
 router.register(r'complaints', ComplaintViewSet, base_name="complaints")

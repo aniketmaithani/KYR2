@@ -101,6 +101,9 @@ $RECYCLE.BIN/
 *.lnk
 
 
-# Database 
+# Database
 
 *.sqlite3
+
+# Virtual Environment
+venv
