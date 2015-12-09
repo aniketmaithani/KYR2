@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'kyr.complaints',  # Complaints App
     'kyr.parliament',  # Parliament App
     'rest_framework',  # Django Rest Framework
+    'django_extensions',  # Django Extensions
 )
 
 MIDDLEWARE_CLASSES = (

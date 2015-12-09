@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+from __future__ import absolute_import, unicode_literals
+
 from django.db import models
 from versatileimagefield.fields import VersatileImageField
 from uuid_upload_path import upload_to
