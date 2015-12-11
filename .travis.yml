@@ -1,0 +1,22 @@
+language: python
+sudo: false
+python:
+- '3.4.3'
+addons:
+  postgresql: "9.4"
+
+before_script:
+- export DATABASE_URL=postgres://postgres@localhost/kyr
+- export DJANGO_SECRET=`openssl rand -base64 32`
+- psql -c "CREATE DATABASE kyr;" -U postgres
+
+install:
+  - pip install -r requirements/development.txt
+
+script:
+- flake8
+
+notifications:
+  email:
+    on_success: change  # [always|never|change]
+    on_failure: always  # [always|never|change]
