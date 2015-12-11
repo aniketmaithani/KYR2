@@ -19,12 +19,14 @@ from rest_framework import routers
 from kyr.complaints.api import ComplaintViewSet
 from kyr.parliament.api import MemberOfParliamentViewSet
 
+
 router = routers.DefaultRouter(trailing_slash=True)
-router.register(r'complaints', ComplaintViewSet, base_name="complaints")
-router.register(r'memberdata', MemberOfParliamentViewSet, base_name="memberdata")
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api/complaints/$', ComplaintViewSet.as_view()),
+    url(r'^api/membersearch/$', MemberOfParliamentViewSet.as_view())
 ]
