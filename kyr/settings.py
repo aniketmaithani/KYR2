@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'kyr.parliament',  # Parliament App
     'rest_framework',  # Django Rest Framework
     'django_extensions',  # Django Extensions
+    'versatileimagefield'  # Django Versatile Image Field
 )
 
 MIDDLEWARE_CLASSES = (
