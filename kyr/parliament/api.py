@@ -15,5 +15,14 @@ class MemberOfParliamentViewSet(generics.ListAPIView):
     '''
 
     permission_classes = (AllowAny, )
-    queryset = MemberOfParliament.objects.all()
     serializer_class = MemberOfParliamentSerializer
+
+    def get_queryset(self):
+        """
+        This view should return a information about the the particular MP
+        whose name is being searched.
+        """
+        name_of_the_mp = self.kwargs['name_of_the_mp']
+        return MemberOfParliament.objects.filter(name_of_the_mp=name_of_the_mp)
+
+# Some Exception Handling Would be Good Here

@@ -28,5 +28,7 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/complaints/$', ComplaintViewSet.as_view()),
-    url(r'^api/membersearch/$', MemberOfParliamentViewSet.as_view())
+    url(r'^api/membersearch/name/(?P<name_of_the_mp>.+)/$', MemberOfParliamentViewSet.as_view()),
+    # For the above URL pattern We need a better REGEX or something of that sort to handle
+    # name which is being searched
 ]
